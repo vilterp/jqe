@@ -1,7 +1,11 @@
 {
-  "name": "jqjs",
+  "name": "jqe",
   "version": "1.0.0",
   "dependencies": {
     "@types/node": "^13.13.2"
+  },
+  "bin": {
+    "jqe": "./jqe.js",
+    "jqe-cat": "./combineFiles.js"
   }
 }
