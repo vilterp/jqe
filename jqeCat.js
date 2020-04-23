@@ -1,7 +1,7 @@
 var fs = require("fs");
 
 if (process.argv.length <= 3) {
-  console.log("combine-files 'expr-getting-array' <file-path>+");
+  console.log("jqe-cat 'expr-getting-array' <file-path>+");
   process.exit(-1);
 }
 

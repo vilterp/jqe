@@ -1,7 +1,7 @@
 var fs = require("fs");
 
 if (process.argv.length !== 3) {
-  console.log("usage: yourdata | jqjs 'some-javascript'");
+  console.log("usage: yourdata | jqe 'some-javascript'");
   process.exit(-1);
 }
 

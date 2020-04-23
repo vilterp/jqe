@@ -6,6 +6,6 @@
   },
   "bin": {
     "jqe": "./jqe.js",
-    "jqe-cat": "./combineFiles.js"
+    "jqe-cat": "jqeCat.js"
   }
 }
