@@ -10,8 +10,6 @@ Like JQ, but you use javascript **E**xpressions.
 ```shell script
 $ cat mydata.json | jqe 'data.rows.filter(r => r.statusCode === 200).map(r => r.responseTime)'
 [
-  {...},
-  {...},
-  ...
+  ...JSON...
 ]
 ```
