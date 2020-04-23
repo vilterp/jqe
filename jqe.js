@@ -1,16 +1,17 @@
-var fs = require("fs");
+#!/usr/bin/env node
+const fs = require("fs");
 
 if (process.argv.length !== 3) {
   console.log("usage: yourdata | jqe 'some-javascript'");
   process.exit(-1);
 }
 
-var inputExpr = process.argv[2];
-var inputFun = eval(`(data) => (${inputExpr})`);
+const inputExpr = process.argv[2];
+const inputFun = eval(`(data) => (${inputExpr})`);
 
-var dataStr = fs.readFileSync(0, "utf-8");
-var dataParsed = JSON.parse(dataStr);
+const dataStr = fs.readFileSync(0, "utf-8");
+const dataParsed = JSON.parse(dataStr);
 
-var out = inputFun(dataParsed);
+const out = inputFun(dataParsed);
 
 console.log(JSON.stringify(out, null, 2));

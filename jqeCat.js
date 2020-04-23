@@ -1,22 +1,23 @@
-var fs = require("fs");
+#!/usr/bin/env node
+const fs = require("fs");
 
 if (process.argv.length <= 3) {
   console.log("jqe-cat 'expr-getting-array' <file-path>+");
   process.exit(-1);
 }
 
-var inputExpr = process.argv[2];
-var inputFun = eval(`(data) => (${inputExpr})`);
+const inputExpr = process.argv[2];
+const inputFun = eval(`(data) => (${inputExpr})`);
 
-var files = process.argv.slice(3);
+const files = process.argv.slice(3);
 
-var contents = files.map(f => {
-  var thisContents = fs.readFileSync(f, "utf-8");
+const contents = files.map(f => {
+  const thisContents = fs.readFileSync(f, "utf-8");
   return JSON.parse(thisContents);
 });
 
-var arrays = contents.map(inputFun);
-var out = [];
+const arrays = contents.map(inputFun);
+const out = [];
 arrays.forEach(a => {
   a.forEach(x => {
     out.push(x);
