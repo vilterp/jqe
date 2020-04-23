@@ -1,0 +1,7 @@
+{
+  "name": "jqjs",
+  "version": "1.0.0",
+  "dependencies": {
+    "@types/node": "^13.13.2"
+  }
+}
