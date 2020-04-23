@@ -1,22 +1,22 @@
-const fs = require("fs");
+var fs = require("fs");
 
 if (process.argv.length <= 3) {
   console.log("combine-files 'expr-getting-array' <file-path>+");
   process.exit(-1);
 }
 
-const inputExpr = process.argv[2];
-const inputFun = eval(`(data) => (${inputExpr})`);
+var inputExpr = process.argv[2];
+var inputFun = eval(`(data) => (${inputExpr})`);
 
-const files = process.argv.slice(3);
+var files = process.argv.slice(3);
 
-const contents = files.map(f => {
-  const thisContents = fs.readFileSync(f, "utf-8");
+var contents = files.map(f => {
+  var thisContents = fs.readFileSync(f, "utf-8");
   return JSON.parse(thisContents);
 });
 
-const arrays = contents.map(inputFun);
-const out = [];
+var arrays = contents.map(inputFun);
+var out = [];
 arrays.forEach(a => {
   a.forEach(x => {
     out.push(x);

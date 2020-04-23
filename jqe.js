@@ -1,16 +1,16 @@
-const fs = require("fs");
+var fs = require("fs");
 
 if (process.argv.length !== 3) {
   console.log("usage: yourdata | jqjs 'some-javascript'");
   process.exit(-1);
 }
 
-const inputExpr = process.argv[2];
-const inputFun = eval(`(data) => (${inputExpr})`);
+var inputExpr = process.argv[2];
+var inputFun = eval(`(data) => (${inputExpr})`);
 
-const dataStr = fs.readFileSync(0, "utf-8");
-const dataParsed = JSON.parse(dataStr);
+var dataStr = fs.readFileSync(0, "utf-8");
+var dataParsed = JSON.parse(dataStr);
 
-const out = inputFun(dataParsed);
+var out = inputFun(dataParsed);
 
 console.log(JSON.stringify(out, null, 2));
