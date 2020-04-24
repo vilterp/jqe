@@ -1,11 +1,16 @@
 {
   "name": "jqe",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "dependencies": {
     "@types/node": "^13.13.2"
   },
   "bin": {
     "jqe": "./jqe.js",
-    "jqe-cat": "jqeCat.js"
+    "jqe-cat": "./jqeCat.js",
+    "to-ndjson": "./toNDJSON.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vilterp/jqe.git"
   }
 }
