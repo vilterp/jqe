@@ -2,7 +2,7 @@
 const fs = require("fs");
 
 if (process.argv.length !== 3) {
-  console.log("usage: yourdata | jqe 'some-javascript'");
+  console.log("usage: yourdata | jqe 'data.map((foo) => foo + 2)'");
   process.exit(-1);
 }
 

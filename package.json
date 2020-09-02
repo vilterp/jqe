@@ -7,7 +7,9 @@
   "bin": {
     "jqe": "./jqe.js",
     "jqe-cat": "./jqeCat.js",
-    "to-ndjson": "./toNDJSON.js"
+    "jqe-ndjson-cat": "./jqeNdjsonCat.js",
+    "to-ndjson": "./toNDJSON.js",
+    "arrays-to-csv": "./arrays-to-csv.js"
   },
   "repository": {
     "type": "git",
